@@ -1,152 +1,267 @@
-// MIXINS
-//Dummy Variable
-$x = false;
-// The top, left, right, and bottom are optional
-setup(display, position, margin, top = null, right = null, bottom = null, left = null)  
-    display display
-    position position
-    margin margin
-    top top
-    left left
-    right right
-    bottom bottom
-        
-font(font-family, font-size, letter-spacing, font-weight, line-height = 1)
-    font-family font-family
-    font-size font-size
-    letter-spacing letter-spacing
-    font-weight font-weight
-    line-height line-height
-        
-// GENERAL FONTS AND CLASSES AND SETUP STUFF
-* {box-sizing: border-box; transition: 0.35s ease;}
-    
-.rela-block
-    setup(block, relative, auto)
-.rela-inline
-    setup(inline-block, relative, auto)
-.floated
-    setup(inline-block, relative, $x)
-    float left
-    
-.abs-center
-    setup($x, absolute, $x, 50%, $x, $x, 50%)
-    transform translate(-50%, -50%)
-    text-align center
-    width 88%
-    
-// --- COLORS ---
+* {
+  box-sizing: border-box;
+  transition: 0.35s ease;
+}
+.rela-block {
+  display: block;
+  position: relative;
+  margin: auto;
+  top: ;
+  left: ;
+  right: ;
+  bottom: ;
+}
+.rela-inline {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  top: ;
+  left: ;
+  right: ;
+  bottom: ;
+}
+.floated {
+  display: inline-block;
+  position: relative;
+  margin: false;
+  top: ;
+  left: ;
+  right: ;
+  bottom: ;
+  float: left;
+}
+.abs-center {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 25%;
+  left: 50%;
+  right: false;
+  bottom: false;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 88%;
+}
+body {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  line-height: 14px;
+  background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right no-repeat;
+  background-size: cover;
+}
+body:before {
+  content: "";
+  display: false;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.92);
+}
+.caps {
+  text-transform: uppercase;
+}
+.justified {
+  text-align: justify;
+}
+p.light {
+  color: #777;
+}
+h2 {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000;
+}
+h3 {
+  font-family: 'Open Sans';
+  font-size: 21px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 15px;
+  color: #000;
+}
+.page {
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  margin: 0; /* remove top/bottom margin */
+  background-color: #fff;
+  box-shadow: none; /* optional — remove shadow if you want full-bleed look */
 
-// --- PAGE STYLINGS ---
-body
-    font('Open Sans',14.4px,0px,400,22.4px)
-    background: url('http://kingofwallpapers.com/leaves/leaves-016.jpg') right no-repeat
-    background-size: cover
-    &:before
-        content ""
-        setup($x,fixed,0,0,0,0,0)
-        background-color rgba(255,255,255,0.92)
-
-.caps { text-transform: uppercase; }
-.justified { text-align: justify; }
-p.light { color: #777; }
-
-h2 { font('Open Sans',24px,4px,600,32px); color: black }
-h3 { font('Open Sans',16.8px,0.8px,600,22.4px); color: black }
-    
-.page
-    width 100%
-    height 100vh
-    margin 80px auto
-    background-color white
-    
-.top-bar
-    height 150px
-    background-color #848484
-    color white
-    
-.name
-    setup($x, absolute, $x, $x, 0, 0, calc(280px + 4%))
-    height 96px
-    text-align center
-    font('Raleway',46.4px,6.4px,100,48px)
-    & div { width: 94% }
-
-    
-.side-bar
-    setup($x,absolute,$x,42px,$x,0,3.5%)
-    width 245px
-    background-color #F7E0C1
-    padding 245px 21px 0px
-        
-.mugshot
-    setup($x,absolute,$x,50px,$x,$x,70px)
-    height 100px
-    width 100px
-    & .logo {margin: -23px;}
-    
-.logo
-    $midSize = 200px;    // Controls overall size
-    setup($x,absolute,$x,0,$x,$x,0)
-    z-index 100
-    margin 0
-    color black
-    height $midSize
-    width $midSize
-    & .logo-svg
-        height 100%
-        width 100%
-        stroke black
-        cursor pointer
-    & .logo-text
-        setup($x, absolute, $x, 58%, 16%)
-        cursor pointer
-        font("Montserrat", $midSize/5 + $midSize/50, 0px, 400, $midSize/5 + $midSize/30)
-
-.social
-    padding-left 60px
-    margin-bottom 20px
-    cursor pointer
-    &:before
-        content ""
-        setup($x,absolute,$x,-4px,$x,$x,10px)
-        height 35px
-        width 35px
-        background-size cover !important
-    &.twitter:before{background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png') center no-repeat}
-    &.pinterest:before{background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png') center no-repeat}
-    &.linked-in:before{background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png') center no-repeat;}
-        
-.side-header
-    font('Open Sans',18px,4px,600,28px)
-    margin 45px auto 10px
-    padding-bottom 5px
-    border-bottom 1px solid #888
-
-    
-.list-thing {padding-left: 25px; margin-bottom: 10px}
-        
-.content-container
-    margin-right 0
-    width calc(95% - 245px)
-    padding 25px 40px 50px
-    & > * {margin: 0 auto 25px}
-    & > h3 {margin: 0 auto 5px}
-    & > p.long-margin {margin: 0 auto 50px}
-
-.title{width: 80%; text-align: center}
-
-.separator
-    width 240px
-    height 2px
-    background-color #999
-    
-.greyed
-    background-color #DDD
-    width 100%
-    max-width 580px
-    text-align center
-    font('Open Sans',18px,6px,600,28px)
-    
-@media screen and (max-width: 1150px)
-    .name {color: white; font('Raleway',38px,6px,100,48px)}
+}
+.top-bar {
+  height: 130px;
+  background-color: #848484;
+  color: #fff;
+}
+.name {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: false;
+  left: calc(200px + 5%);
+  right: 0;
+  bottom: 0;
+  height: 130px;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 42px;
+  letter-spacing: 8px;
+  font-weight: 100;
+  line-height: 60px;
+}
+.name div {
+  width: 94%;
+}
+.side-bar {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 10px;
+  left: 5%;
+  right: false;
+  bottom: 0;
+  width: 100px;
+  background-color: #f7e0c1;
+  padding: 200px 3px 2px;
+}
+.mugshot {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 50px;
+  left: 70px;
+  right: false;
+  bottom: false;
+  height: 210px;
+  width: 210px;
+}
+.mugshot .logo {
+  margin: -23px;
+}
+.logo {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 0;
+  left: 0;
+  right: false;
+  bottom: false;
+  z-index: 100;
+  margin: 0;
+  color: #000;
+  height: 100px;
+  width: 100px;
+}
+.logo .logo-svg {
+  height: 100%;
+  width: 100%;
+  stroke: #000;
+  cursor: pointer;
+}
+.logo .logo-text {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 58%;
+  left: ;
+  right: 16%;
+  bottom: ;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 55px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  line-height: 58.333333333333336px;
+}
+.social {
+  padding-left: 30px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.social:before {
+  content: "";
+  display: false;
+  position: absolute;
+  margin: false;
+  top: -4px;
+  left: 0px;
+  right: false;
+  bottom: false;
+  height: 20px;
+  width: 20px;
+  background-size: cover !important;
+}
+.social.twitter:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+}
+.social.pinterest:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;
+}
+.social.linked-in:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png") center no-repeat;
+}
+.side-header {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 21px;
+  margin: 60px auto 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #888;
+}
+.list-thing {
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+.content-container {
+  margin-right: 0;
+  width: calc(95% - 100px);
+  padding: 25px 20px 50px;
+}
+.content-container > * {
+  margin: 0 auto 10px;
+}
+.content-container > h3 {
+  margin: 0 auto 5px;
+}
+.content-container > p.long-margin {
+  margin: 0 auto 15px;
+}
+.title {
+  width: 80%;
+  text-align: center;
+}
+.separator {
+  width: 240px;
+  height: 2px;
+  background-color: #999;
+}
+.greyed {
+  background-color: #ddd;
+  width: 100%;
+  max-width: 580px;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-weight: 600;
+  line-height: 28px;
+}
+@media screen and (max-width: 1150px) {
+  .name {
+    color: #fff;
+    font-family: 'Raleway';
+    font-size: 38px;
+    letter-spacing: 6px;
+    font-weight: 100;
+    line-height: 48px;
+  }
+}

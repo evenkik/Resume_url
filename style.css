@@ -124,12 +124,12 @@ h3 {
   position: absolute;
   margin: false;
   top: 10px;
-  left: 5%;
+  left: 1%;
   right: false;
   bottom: 0;
-  width: 100px;
+  width: 150px;
   background-color: #f7e0c1;
-  padding: 200px 3px 2px;
+  padding: 220px 3px 2px;
 }
 .mugshot {
   display: false;
@@ -139,11 +139,11 @@ h3 {
   left: 70px;
   right: false;
   bottom: false;
-  height: 210px;
-  width: 210px;
+  height: 100px;
+  width: 100px;
 }
 .mugshot .logo {
-  margin: -23px;
+  margin: 0px;
 }
 .logo {
   display: false;
@@ -156,8 +156,8 @@ h3 {
   z-index: 100;
   margin: 0;
   color: #000;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 .logo .logo-svg {
   height: 100%;
@@ -181,7 +181,7 @@ h3 {
   line-height: 58.333333333333336px;
 }
 .social {
-  padding-left: 30px;
+  padding-left: 25px;
   margin-bottom: 25px;
   cursor: pointer;
 }
@@ -223,7 +223,7 @@ h3 {
 }
 .content-container {
   margin-right: 0;
-  width: calc(95% - 100px);
+  width: calc(95% - 150px);
   padding: 25px 20px 50px;
 }
 .content-container > * {
@@ -240,7 +240,7 @@ h3 {
   text-align: center;
 }
 .separator {
-  width: 240px;
+  width: 200px;
   height: 2px;
   background-color: #999;
 }

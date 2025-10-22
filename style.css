@@ -123,10 +123,10 @@ h3 {
   display: false;
   position: absolute;
   margin: false;
-  top: 10px;
+  top: 40px;
   left: 1%;
   right: false;
-  bottom: 0;
+  bottom: 40px;
   width: 150px;
   background-color: #f7e0c1;
   padding: 220px 3px 2px;
@@ -213,7 +213,7 @@ h3 {
   letter-spacing: 1px;
   font-weight: 600;
   line-height: 21px;
-  margin: 60px auto 10px;
+  margin: 40px auto 10px;
   padding-bottom: 5px;
   border-bottom: 1px solid #888;
 }
@@ -227,13 +227,13 @@ h3 {
   padding: 25px 20px 50px;
 }
 .content-container > * {
-  margin: 0 auto 10px;
+  margin: 0 auto 15px;
 }
 .content-container > h3 {
-  margin: 0 auto 5px;
+  margin: 0 auto 10px;
 }
 .content-container > p.long-margin {
-  margin: 0 auto 15px;
+  margin: 0 auto 50px;
 }
 .title {
   width: 80%;

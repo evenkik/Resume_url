@@ -96,7 +96,7 @@ h3 {
 
 }
 .top-bar {
-  height: 130px;
+  height: 150px;
   background-color: #848484;
   color: #fff;
 }
@@ -108,7 +108,7 @@ h3 {
   left: calc(200px + 5%);
   right: 0;
   bottom: 0;
-  height: 130px;
+  height: 90px;
   text-align: center;
   font-family: 'Raleway';
   font-size: 42px;
@@ -136,7 +136,7 @@ h3 {
   position: absolute;
   margin: false;
   top: 50px;
-  left: 70px;
+  left: 25px;
   right: false;
   bottom: false;
   height: 100px;
@@ -156,8 +156,8 @@ h3 {
   z-index: 100;
   margin: 0;
   color: #000;
-  height: 50px;
-  width: 50px;
+  height: 120px;
+  width: 120px;
 }
 .logo .logo-svg {
   height: 100%;
@@ -169,13 +169,13 @@ h3 {
   display: false;
   position: absolute;
   margin: false;
-  top: 58%;
+  top: 45%;
   left: ;
   right: 16%;
   bottom: ;
   cursor: pointer;
   font-family: "Montserrat";
-  font-size: 55px;
+  font-size: 25px;
   letter-spacing: 0px;
   font-weight: 400;
   line-height: 58.333333333333336px;
@@ -232,12 +232,22 @@ h3 {
 .content-container > h3 {
   margin: 0 auto 10px;
 }
-.content-container > p.long-margin {
-  margin: 0 auto 50px;
+.contact-block {
+  position: relative;
+  text-align: center;
+  width: 88%;
 }
 .title {
   width: 80%;
   text-align: center;
+}
+.contact-info {
+    color: #ffff;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 15px;
 }
 .separator {
   width: 200px;

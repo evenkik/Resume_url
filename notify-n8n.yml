@@ -13,4 +13,4 @@ jobs:
           curl -X POST \
             -H "Content-Type: application/json" \
             -d "{\"status\": \"deployed\", \"repo\": \"${{ github.repository }}\", \"branch\": \"${{ github.ref_name }}\", \"path\": \"docs\", \"commit\": \"${{ github.sha }}\"}" \
-            "https://n8n.srv1034010.hstgr.cloud/webhook-test/fcd6e2a2-d660-48b6-ac80-42f755d66c39"
+            "https://n8n.srv1034010.hstgr.cloud/webhook/fcd6e2a2-d660-48b6-ac80-42f755d66c39"

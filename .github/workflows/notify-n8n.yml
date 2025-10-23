@@ -1,16 +1,19 @@
-name: Notify n8n on GitHub Pages Build
+name: Notify n8n on GitHub Pages Deploy
 
 on:
-  page_build:
-    types: [completed]
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types:
+      - completed
 
 jobs:
   notify:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Send notification to n8n
+      - name: Send POST to n8n webhook
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
-            -d "{\"status\": \"deployed\", \"repo\": \"${{ github.repository }}\", \"branch\": \"${{ github.ref_name }}\", \"path\": \"docs\", \"commit\": \"${{ github.sha }}\"}" \
-            "https://n8n.srv1034010.hstgr.cloud/webhook/fcd6e2a2-d660-48b6-ac80-42f755d66c39"
+            -d "{\"status\": \"deployed\", \"repo\": \"${{ github.repository }}\", \"branch\": \"${{ github.ref }}\", \"commit\": \"${{ github.event.workflow_run.head_sha }}\"}" \
+            https://n8n.srv1034010.hstgr.cloud/webhook/fcd6e2a2-d660-48b6-ac80-42f755d66c39

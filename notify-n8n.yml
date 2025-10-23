@@ -8,9 +8,9 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify n8n webhook
+      - name: Send notification to n8n
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
-            -d "{\"status\": \"deployed\", \"repo\": \"${{ github.repository }}\", \"commit\": \"${{ github.sha }}\"}" \
+            -d "{\"status\": \"deployed\", \"repo\": \"${{ github.repository }}\", \"branch\": \"${{ github.ref_name }}\", \"path\": \"docs\", \"commit\": \"${{ github.sha }}\"}" \
             "https://n8n.srv1034010.hstgr.cloud/webhook-test/fcd6e2a2-d660-48b6-ac80-42f755d66c39"

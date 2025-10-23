@@ -1,1 +1,278 @@
 
+* {
+  box-sizing: border-box;
+  transition: 0.35s ease;
+}
+.rela-block {
+  display: block;
+  position: relative;
+  margin: auto;
+  top: ;
+  left: ;
+  right: ;
+  bottom: ;
+}
+.rela-inline {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  top: ;
+  left: ;
+  right: ;
+  bottom: ;
+}
+.floated {
+  display: inline-block;
+  position: relative;
+  margin: false;
+  top: ;
+  left: ;
+  right: ;
+  bottom: ;
+  float: left;
+}
+.abs-center {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 25%;
+  left: 50%;
+  right: false;
+  bottom: false;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 88%;
+}
+body {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  line-height: 14px;
+  background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right no-repeat;
+  background-size: cover;
+}
+body:before {
+  content: "";
+  display: false;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.92);
+}
+.caps {
+  text-transform: uppercase;
+}
+.justified {
+  text-align: justify;
+}
+p.light {
+  color: #777;
+}
+h2 {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000;
+}
+h3 {
+  font-family: 'Open Sans';
+  font-size: 21px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 15px;
+  color: #000;
+}
+.page {
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  margin: 0; /* remove top/bottom margin */
+  background-color: #fff;
+  box-shadow: none; /* optional — remove shadow if you want full-bleed look */
+
+}
+.top-bar {
+  height: 150px;
+  background-color: #848484;
+  color: #fff;
+}
+.name {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: false;
+  left: calc(200px + 5%);
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 42px;
+  letter-spacing: 8px;
+  font-weight: 100;
+  line-height: 60px;
+}
+.name div {
+  width: 94%;
+}
+.side-bar {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 40px;
+  left: 1%;
+  right: false;
+  bottom: 40px;
+  width: 150px;
+  background-color: #f7e0c1;
+  padding: 220px 3px 2px;
+}
+.mugshot {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 50px;
+  left: 25px;
+  right: false;
+  bottom: false;
+  height: 100px;
+  width: 100px;
+}
+.mugshot .logo {
+  margin: 0px;
+}
+.logo {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 0;
+  left: 0;
+  right: false;
+  bottom: false;
+  z-index: 100;
+  margin: 0;
+  color: #000;
+  height: 120px;
+  width: 120px;
+}
+.logo .logo-svg {
+  height: 100%;
+  width: 100%;
+  stroke: #000;
+  cursor: pointer;
+}
+.logo .logo-text {
+  display: false;
+  position: absolute;
+  margin: false;
+  top: 45%;
+  left: ;
+  right: 16%;
+  bottom: ;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 25px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  line-height: 58.333333333333336px;
+}
+.social {
+  padding-left: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.social:before {
+  content: "";
+  display: false;
+  position: absolute;
+  margin: false;
+  top: -4px;
+  left: 0px;
+  right: false;
+  bottom: false;
+  height: 20px;
+  width: 20px;
+  background-size: cover !important;
+}
+.social.twitter:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+}
+.social.pinterest:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;
+}
+.social.linked-in:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png") center no-repeat;
+}
+.side-header {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 21px;
+  margin: 40px auto 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #888;
+}
+.list-thing {
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+.content-container {
+  margin-right: 0;
+  width: calc(95% - 150px);
+  padding: 25px 20px 50px;
+}
+.content-container > * {
+  margin: 0 auto 15px;
+}
+.content-container > h3 {
+  margin: 0 auto 10px;
+}
+.contact-block {
+  position: relative;
+  text-align: center;
+  width: 88%;
+}
+.title {
+  width: 80%;
+  text-align: center;
+}
+.contact-info {
+    color: #ffff;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 15px;
+}
+.separator {
+  width: 200px;
+  height: 2px;
+  background-color: #999;
+}
+.greyed {
+  background-color: #ddd;
+  width: 100%;
+  max-width: 580px;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-weight: 600;
+  line-height: 28px;
+}
+@media screen and (max-width: 1150px) {
+  .name {
+    color: #fff;
+    font-family: 'Raleway';
+    font-size: 38px;
+    letter-spacing: 6px;
+    font-weight: 100;
+    line-height: 48px;
+  }
+}

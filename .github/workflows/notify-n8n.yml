@@ -30,4 +30,4 @@ jobs:
                  \"branch\": \"${{ github.ref_name }}\", \
                  \"commit\": \"${{ github.event.workflow_run.head_sha }}\", \
                  \"message\": \"${{ steps.get_message.outputs.message }}\"}" \
-            https://n8n.srv1034010.hstgr.cloud/webhook/fcd6e2a2-d660-48b6-ac80-42f755d66c39
+            https://n8n.srv1034010.hstgr.cloud/webhook-test/fcd6e2a2-d660-48b6-ac80-42f755d66c39

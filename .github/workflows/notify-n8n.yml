@@ -21,10 +21,11 @@ jobs:
             | jq -r '.commit.message')
           echo "message=$COMMIT_MESSAGE" >> $GITHUB_OUTPUT
 
-      - name: Send POST to n8n webhook
+      - name: Send POST to n8n webhook with auth header
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.N8N_AUTH_TOKEN }}" \
             -d "{\"status\": \"deployed\", \
                  \"repo\": \"${{ github.repository }}\", \
                  \"branch\": \"${{ github.ref_name }}\", \

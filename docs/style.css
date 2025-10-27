@@ -112,7 +112,7 @@ h3 {
   height: 90px;
   text-align: center;
   font-family: 'Raleway';
-  font-size: 42px;
+  font-size: 32px;
   letter-spacing: 8px;
   font-weight: 100;
   line-height: 60px;
@@ -200,7 +200,7 @@ h3 {
   background-size: cover !important;
 }
 .social.twitter:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+  background: url("https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png") center no-repeat;
 }
 .social.pinterest:before {
   background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;

@@ -25,7 +25,7 @@ jobs:
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
-            -H "Authorization: Bearer ${{ secrets.N8N_AUTH_TOKEN }}" \
+            -H "Authorization: ${{ secrets.N8N_AUTH_TOKEN }}" \
             -d "{\"status\": \"deployed\", \
                  \"repo\": \"${{ github.repository }}\", \
                  \"branch\": \"${{ github.ref_name }}\", \
